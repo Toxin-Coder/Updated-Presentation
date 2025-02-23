@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Presentation</title>
+    <style>
+    .webpage{
+      overflow: auto;
+  }
+  .restorer{
+  font-weight: bold;
+  font-size: 200%;
+  top: 180px;
+  left: 88%;
+  position: fixed;
+  }
+  .deleter{
+      font-weight: bold;
+      font-size: 200%;
+      position: fixed;
+  left: 88%;
+  }
+  body{
+      background-image:url("https://wallpapercave.com/wp/wp7401476.jpg") ;
+      background-repeat: repeat-y;
+      background-size: 2000px;
+      text-align: center;
+  
+  }
+  #info{
+      left: 15%;
+      position: relative;
+      width: 70%;
+      height: auto;
+      background-color: rgb(176, 255, 173);
+  }
+  .numbers{
+  position:relative;
+  width:100px;
+  height:100px;
+  border-radius: 20px;
+  border:none;
+  background-color: rgba(0, 0, 0, 0.966);
+  color:white;
+  font-size: 4rem;
+  font-weight:bold;
+  cursor:pointer;
+  }
+  .operator{
+  position:relative;
+  width:100px;
+  height:100px;
+  border-radius: 10px;
+  background-color: rgba(75, 255, 69, 0.815);
+  font-size: 4rem;
+  color:rgb(0, 0, 0);
+  font-weight:bold;
+  }
+  .display{
+      text-align: left;
+      color: black;
+      position:relative;
+      margin-bottom: 10px;
+      height: 60px;
+      font-weight: bold;
+      font-size: 30px;
+  }
+  .numbers:hover{
+      background-color: rgba(34, 32, 32, 0.966);
+  }
+  .operator:hover{
+      background-color: rgba(63, 202, 58, 0.815);
+  }
+  .numbers:active{
+      background-color: rgba(46, 39, 39, 0.966);
+  }
+  .operator:active{
+      background-color: rgba(73, 180, 69, 0.815);
+  }
+  .house1{
+      z-index: 2;
+      width: 50%;
+      left: 25%;
+      position: relative;
+  }
+  
+  p{
+      font-weight: bold;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  h1{
+  font-family: 'Times New Roman', Times, serif;
+  }
+  h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .gradient{
+      left: 20%;
+      position: relative;
+      width: 500px;
+      height: 300px; color: pale[];
+      background:linear-gradient(green,blue,red)
+  }
+  label{
+      font-weight: bolder;
+      color: rgb(122, 194, 194);
+  }
+  legend{
+      text-decoration: overline dashed;
+      padding-bottom: 20px;
+      font-size: 20px;
+      font-weight: bolder;
+  }
+  fieldset{
+      border: 2px solid black;
+  }
+  .sendbutton{
+      font-size: 20px;
+      font-weight: bold;
+  }
+  .family{
+     z-index: 1; 
+      position: relative;
+      right: 23%;
+      width: 47%;
+  }
+  .form{
+      position:relative;
+  left: 20%;
+      width: 60%;
+  }
+  * {
+      padding: 0;
+      margin: 0;
+  }
+  #panorama-360-view {
+      width: 40vw;
+      height: 50vh;
+  }
+  #dropdownmenu{
+      font-size: 40px;
+      width: 300px;
+  }
+  #extrainfo{
+      text-align: left;
+      position: relative;
+      border-radius: 5px;
+      background-color: rgb(245, 245, 84);
+  width: 85%;
+  left: 8%;
+  height: auto;
+  margin-bottom: 50px;
+  }
+  #hidee{
+      width: 83%;
+      display: none;
+  }
+  .texthide{
+  padding: 20px;
+  padding-left:30px ;
+  padding-left: 30px ;
+  position:relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  }
+  #infopage{
+      display: inline;
+  }
+  #infopage2{
+      display: none;
+  }
+  .buttone{
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 30px;
+  }
+  .biggletter{
+      font-size: 50px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+</head>
+<body>
+  <!-- This is made by Michael Clur -->
+  <button onclick="disapear()" class="deleter">Make this web page disappear</button>
+  <button onclick="reappear()" class="restorer">Bring this web page back</button>
+    <div id="webpage">
+<div id="info">
+  <div id="infopage">
+  <h1>This is my first presentation to web developement club, enjoy.</h1>
+  <h2>Please remember if you want to make my website disappear just press the button on the right and poof! It's gone just like that.</h2>
+  <h1>This is a calculator I have made using html css and javascript.</h1>
+  <button onclick="dropmenu()" id="dropdownmenu">Read More</button><br><br>
+  <div id="extrainfo">
+    <div id="hidee"><h1 class="texthide">This is a drop down menu that is invisible until button is clicked in which case it is then visible until the button is clicked again.</h1></div>
+  </div>
+  <div class="Calculator">
+    <input class="display" id="display" readonly>
+    <div class="Buttons">
+      <button class="numbers" onclick="addtodisplay('1')">1</button>
+      <button class="numbers" onclick="addtodisplay('2')">2</button>
+      <button class="numbers" onclick="addtodisplay('3')">3</button>
+      <button class="operator" onclick="addtodisplay('+')">+</button><br>
+      <button class="numbers" onclick="addtodisplay('4')">4</button>
+      <button class="numbers" onclick="addtodisplay('5')">5</button>
+      <button class="numbers" onclick="addtodisplay('6')">6</button>
+      <button class="operator" onclick="addtodisplay('-')">-</button><br>
+      <button class="numbers" onclick="addtodisplay('7')">7</button>
+      <button class="numbers" onclick="addtodisplay('8')">8</button>
+      <button class="numbers" onclick="addtodisplay('9')">9</button>
+      <button class="operator" onclick="addtodisplay('*')">*</button><br>
+      <button class="numbers" onclick="addtodisplay('0')">0</button>
+      <button class="numbers" onclick="addtodisplay('/')">/</button>
+      <button class="operator" onclick="calculate()">=</button>
+      <button class="operator" onclick="cleardis()">CE</button>
+ <!-- here is a comment -->
+    </div>
+  </div>
+<br><br><br><br>
+<h1>I can also give images different opacitys, I have a slider using css code as a style sheet this slider changes the images opacity.</h1>
+<img id="house" class="house1" src="https://th.bing.com/th/id/OIP.q2JFXaEajMGR7Nrl0_E3nAHaGF?rs=1&pid=ImgDetMain"><img class="family" src="https://th.bing.com/th/id/R.769c00ed70c608be6ead6b501f2ad676?rik=8QyQjZoe0Pkuig&pid=ImgRaw&r=0"<br>
+<h3>Opacity</h3>
+<input id="opacityslider" type="range" min="0" max="100" value="100">
+<br><br><br><br><br><br>
+<h1>This is a linear gradient below which is created in css using a background linear gradient.</h1><br>
+<div class="gradient">
+</div><br><br><br><br><br>
+<h1>Here is a nice video to watch:</h1><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MEglOulvgSY?si=LmLCLErorVtOEj7g&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br><h2>Here is a quick form to fill out:</h2>
+<div class="form">
+  <fieldset>
+  <legend>Sign in form</legend>
+  <label>Email:</label>
+  <input type="text"><br><br>
+  <label>Password:</label>
+  <input type="text">
+  <br><br>
+  <Button class="sendbutton">Send</Button>
+  </fieldset><br><br><br><br>
+<h1>Here is a 360 degree image of a classroom full of cats drag using your mouse on the image to move around.</h1>
+<div id="panorama-360-view"></div>
+<button class="buttone" onclick="nextscreen()">Next page</button>
+</div>
+</div>
+<div id="infopage2">
+  <h1 class="biggletter">Thank you for reading my presentation.</h1>
+  <button class="buttone" onclick="nextscreen()">Go back</button>
+  </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script type="text/javascript">
+  const answer = document.getElementById("display");
+    setInterval(Refreshslider, 100);
+    pannellum.viewer('panorama-360-view', {
+        "type": "equirectangular",
+        "panorama": "classroom.jpg",
+        "autoLoad": true
+    })
+    function disapear(){
+    document.getElementById("webpage").style.display="none";
+    }
+    function reappear(){
+        document.getElementById("webpage").style.display="inline";     
+    }
+    function addtodisplay(input){
+    answer.value += input;
+    }
+    function calculate(){
+        try{
+            answer.value = eval(answer.value);
+        }
+        catch(error)
+        {
+            answer.value="Error"
+        }
+    }
+    function cleardis(){
+        document.getElementById("display").value = "";
+    }
+    function Refreshslider(){
+        document.getElementById("house").style.opacity = document.getElementById("opacityslider").value / 100
+    }
+    function dropmenu(){
+        if(document.getElementById("hidee").style.display == "inline"){
+        document.getElementById("hidee").style.display="none";
+        }
+        else{
+            document.getElementById("hidee").style.display="inline";
+        }
+    }
+    function nextscreen(){
+        if(document.getElementById("infopage").style.display == "inline"){
+            document.getElementById("infopage").style.display="none";
+            document.getElementById("infopage2").style.display="inline";
+            }
+            else{
+                document.getElementById("infopage").style.display="inline";
+                document.getElementById("infopage2").style.display="none";
+            }
+    }</script>
+</body>
+</html>
